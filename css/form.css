@@ -1,0 +1,8 @@
+.form__fieldset {
+  max-width: 200px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  text-shadow: black 5px 5px 5px;
+}

@@ -1,0 +1,16 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffdbb245;
+}
+
+.container__paragraph {
+  color: white;
+  text-shadow: black 5px 5px 5px;
+}
+
+.container__header {
+  text-align: center;
+  color: #ffe665;
+  text-shadow: black 5px 5px 5px;
+}
