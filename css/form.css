@@ -6,3 +6,24 @@
   padding: 20px;
   text-shadow: black 5px 5px 5px;
 }
+
+.form__button {
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  background-color: hsl(50, 100%, 45%);
+  color: black;
+}
+
+.form__button:hover {
+  background-color: hsl(50, 100%, 49%);
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+
+.form__button:active {
+  background-color: hsl(50, 100%, 45%);
+  transition: 0.2s;
+  transform: scale(1.1);
+}
