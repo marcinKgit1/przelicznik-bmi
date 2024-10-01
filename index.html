@@ -15,35 +15,39 @@
     <script defer src="js/script.js"></script>
   </head>
   <body class="body">
-    <h1>Kalkulator bmi</h1>
-    <form class="form">
-      <fieldset class="form__fieldset">
-        <legend class="form__legend">Twoje dane</legend>
+    <div class="container">
+      <h1 class="container__header">Kalkulator bmi</h1>
+      <form class="form">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Twoje dane</legend>
+          <p>
+            <label>
+              Twój wzrost*
+              <input
+                class="height"
+                required
+                type="number"
+                min="1"
+                step="any"
+                autofocus
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Twoja waga*
+              <input class="weight" required type="number" min="1" step="any" />
+            </label>
+          </p>
+        </fieldset>
         <p>
-          <label>
-            Twój wzrost*
-            <input
-              class="height"
-              required
-              type="number"
-              min="1"
-              step="any"
-              autofocus
-            />
-          </label>
+          <button class="form__button">policz</button>
+          <button class="form__button" type="reset">wyczyść</button>
         </p>
-        <p>
-          <label>
-            Twoja waga*
-            <input class="weight" required type="number" min="1" step="any" />
-          </label>
-        </p>
-      </fieldset>
-      <p>
-        <button class="form__button">policz</button>
-        <button class="form__button" type="reset">wyczyść</button>
+      </form>
+      <p class="container__paragraph">
+        Twoje bmi wynosi: <strong class="outcome"></strong>
       </p>
-    </form>
-    <p>Twoje bmi wynosi: <strong class="outcome"></strong></p>
+    </div>
   </body>
 </html>
