@@ -16,7 +16,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/bmi\ background\ image.jpg");
+  background-image: url("../public/images/bmi background image.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
