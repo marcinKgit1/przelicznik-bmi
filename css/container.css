@@ -40,11 +40,9 @@
 
 .outcome {
   font-size: 3.5rem;
-  color: #ffe665;
   font-weight: 700;
   display: block;
   margin-top: 0.5rem;
-  text-shadow: 0 0 20px rgba(255, 230, 101, 0.6);
   animation: pulse 2s infinite;
 }
 

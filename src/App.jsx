@@ -20,6 +20,16 @@ function App() {
     setBmi(null)
   }
 
+  const getBmiColor = (bmiValue) => {
+    const val = parseFloat(bmiValue);
+    if (val < 16) return '#ff4d4d'; // Wygłodzenie (Czerwony)
+    if (val < 17) return '#ff9933'; // Wychudzenie (Pomarańczowy)
+    if (val < 18.5) return '#ffd633'; // Niedowaga (Żółty)
+    if (val < 25) return '#4caf50'; // Waga prawidłowa (Zielony)
+    if (val < 30) return '#ff9933'; // Nadwaga (Pomarańczowy)
+    return '#ff4d4d'; // Otyłość (Czerwony)
+  }
+
   return (
     <div className="container">
       <h1 className="container__header">Kalkulator bmi</h1>
@@ -31,27 +41,27 @@ function App() {
             <ul className="info-panel__list">
               <li className="info-panel__item">
                 <span>Wygłodzenie</span>
-                <span className="info-panel__range">&lt; 16.0</span>
+                <span className="info-panel__range" style={{color: '#ff4d4d'}}>&lt; 16.0</span>
               </li>
               <li className="info-panel__item">
                 <span>Wychudzenie</span>
-                <span className="info-panel__range">16.0 - 16.99</span>
+                <span className="info-panel__range" style={{color: '#ff9933'}}>16.0 - 16.99</span>
               </li>
               <li className="info-panel__item">
                 <span>Niedowaga</span>
-                <span className="info-panel__range">17.0 - 18.49</span>
+                <span className="info-panel__range" style={{color: '#ffd633'}}>17.0 - 18.49</span>
               </li>
               <li className="info-panel__item">
                 <span>Waga prawidłowa</span>
-                <span className="info-panel__range">18.5 - 24.99</span>
+                <span className="info-panel__range" style={{color: '#4caf50'}}>18.5 - 24.99</span>
               </li>
               <li className="info-panel__item">
                 <span>Nadwaga</span>
-                <span className="info-panel__range">25.0 - 29.99</span>
+                <span className="info-panel__range" style={{color: '#ff9933'}}>25.0 - 29.99</span>
               </li>
               <li className="info-panel__item">
                 <span>Otyłość</span>
-                <span className="info-panel__range">&gt; 30.0</span>
+                <span className="info-panel__range" style={{color: '#ff4d4d'}}>&gt; 30.0</span>
               </li>
             </ul>
           </div>
@@ -114,7 +124,16 @@ function App() {
           </form>
           {bmi !== null && (
             <p className="container__paragraph">
-              Twoje bmi wynosi: <br /><strong className="outcome">{bmi}</strong>
+              Twoje bmi wynosi: <br />
+              <strong 
+                className="outcome"
+                style={{
+                  color: getBmiColor(bmi),
+                  textShadow: `0 0 20px ${getBmiColor(bmi)}80`
+                }}
+              >
+                {bmi}
+              </strong>
             </p>
           )}
         </>
