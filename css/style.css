@@ -1,4 +1,6 @@
-html {
+html, body {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,10 +11,23 @@ html {
 }
 
 .body {
-  background-image: url("../images/bmi\ background\ image.jpg");
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/bmi\ background\ image.jpg");
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
